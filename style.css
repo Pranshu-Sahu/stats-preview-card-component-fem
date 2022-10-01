@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@700&display=swap");
+html{
+    font-size: 15px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background-color:hsl(233, 47%, 7%);
+  color:hsl(0, 0%, 100%);
+}
+.row{
+    display:flex;
+    flex-direction: column;
+}
+.card{
+    width: min(60%,240px);
+    border-radius:10px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.profile-image{
+    flex-basis: 30vh;
+    background-image:linear-gradient(hsla(277, 64%, 61%, 0.568),rgba(170, 92, 219, 0.511)), url(images/image-header-desktop.jpg);
+    background-size: cover;
+}
+.profile-text{
+    text-align: center;
+    padding: 1em;
+    background-color:hsl(244, 38%, 16%);
+}
+.profile-heading{
+    font-size: 1.35rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+.profile-heading--color{
+    color: hsl(277, 64%, 61%)
+}
+.profile-body{
+    line-height: 1.6;
+}
+.profile-body,
+.stats-heading{
+    font-weight: 400;
+    font-size: 0.95rem;
+    color:hsla(0, 0%, 100%, 0.75);
+}
+.profile-footer{
+    text-transform: uppercase;
+}
+.size {
+  position: fixed;
+  right: 10px;
+  top: 5px;
+  z-index: 2;
+  color: rgba(255, 0, 0, 0.608);
+  font-size: 2rem;
+  font-weight: 900;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (min-width: 650px) {
+    .card{
+        min-width:640px;
+        width:85%;
+        max-width:850px ;
+    }
+    .row{
+        flex-direction: row;
+    }
+    .profile-footer{
+        justify-content:space-between;
+    }
+    .row.card>*{
+        flex-basis: 50%;
+    }
+    .profile-image{
+        order:2;
+    }
+    .profile-text{
+       text-align:left;
+       padding: 2em;
+    }
+    h1.profile-heading{
+        font-size: 1.75rem;
+    }
+    .profile-body{
+        font-size: 0.8rem;
+    }
+    h2.profile-heading{
+        font-size:1.25rem;
+    }
+    .stats-heading{
+        font-size:0.75rem;
+    }
+}
